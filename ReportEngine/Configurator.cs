@@ -20,7 +20,6 @@ namespace ReportEngine
         {
             var tasks = AppComposer.Container.Resolve<IEnumerable<IConfiguratorTask>>();
 
-
             foreach (var task in tasks)
             {
                 task.Execute();

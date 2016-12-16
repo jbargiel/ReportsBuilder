@@ -23,9 +23,9 @@ namespace ReportEngine
         public void Execute()
         {
             _config.Routes.MapHttpRoute(
-               name: "DefaultApi",
+               name: "Default",
                routeTemplate: "api/{controller}/{id}",
-               defaults: new { id = RouteParameter.Optional }
+               defaults: new { controller = "Reports", action = "Get", id = RouteParameter.Optional }
            );
         }
     }
